@@ -1,4 +1,5 @@
 Apex_SC - Sistema de Gestión
+
 Repositorio que contiene la base de datos y consultas SQL para el sistema Apex_SC.
 
 📁 Estructura del Repositorio
