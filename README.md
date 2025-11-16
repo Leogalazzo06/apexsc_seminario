@@ -1,34 +1,48 @@
-# 🧩 Apex_SC - Sistema de Gestión
+# 🧩 Apex_SC – Sistema de Gestión (Java + PostgreSQL)
 
-Repositorio que contiene la **base de datos**, las **consultas SQL** y los **archivos Java** del sistema Apex_SC.
+Este repositorio contiene el **sistema de gestión Apex_SC**, desarrollado en **Java (Swing)** y usando **PostgreSQL** como base de datos.  
+Incluye:
+
+- Proyecto completo de NetBeans (en formato ZIP)  
+- Base de datos con tablas, secuencias y datos reales  
+- Scripts SQL con tablas, inserciones y consultas  
+- Documentación del sistema
 
 ---
 
 ## 📁 Estructura del Repositorio
 
-### 📊 Base de Datos
-- **apex_sc.sql** → Script principal con la estructura de la base de datos (tablas creadas sin datos).  
-- **tablas_inserciones_consultas.sql** → Script con inserciones de datos y consultas de ejemplo.
-
-### 💻 Código Fuente en Java
-- Carpeta **src/apexsc/** → Contiene las clases del sistema desarrolladas en Java:
-  - `Socio.java`, `Cuota.java`, `Evento.java`
-  - `VentanaSocios.java`, `VentanaCuotas.java`, `VentanaEventos.java`
-  - `ApexSC.java` (clase principal del sistema)
+### 📦 Proyecto Java (NetBeans)
+- **ApexSC – Java.zip** → Contiene el proyecto completo:
+  - `src/` → Código fuente del sistema  
+  - `nbproject/` → Configuración interna de NetBeans  
+  - `dist/` → Archivo `.jar` generado y librerías (incluye PostgreSQL driver)  
+  - `build.xml`, `manifest.mf`  
+- Para ejecutar el sistema, **descomprimir el ZIP y abrir el proyecto en NetBeans**.
 
 ---
 
-## 📋 Notas Importantes
-- Las tablas en **apex_sc.sql** están creadas pero sin datos.  
-- Los datos de prueba fueron eliminados como parte del trabajo práctico.  
-- El archivo **tablas_inserciones_consultas.sql** contiene ejemplos de inserciones y consultas.  
-- El sistema Java se puede ejecutar directamente desde **NetBeans**, abriendo el proyecto y corriendo la clase principal `ApexSC.java`.
+### 🗄️ Base de Datos
+
+#### **apex_sc.sql**
+- Export completo desde PostgreSQL  
+- Incluye:
+  - Creación de tablas  
+  - Creación de secuencias  
+  - Relaciones (foreign keys)  
+  - **Datos reales de prueba** (socios, cuotas, usuarios, abonos, eventos, entradas)  
+
+#### **tablas_inserciones_consultas.sql**
+- Archivo adicional con:
+  - Inserciones organizadas por tabla  
+  - Consultas de ejemplo para pruebas  
 
 ---
 
-## 🔧 Tecnologías Utilizadas
-- **Lenguaje:** Java  
-- **Entorno:** NetBeans IDE  
-- **Base de datos:** PostgreSQL 
-- **Interfaz:** Java Swing  
+## 🛠️ Cómo Restaurar la Base de Datos
+
+1. Abrir **pgAdmin** o cualquier cliente de PostgreSQL.  
+2. Crear una base de datos vacía:
+   ```sql
+   CREATE DATABASE apex_sc;
 
